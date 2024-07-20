@@ -15,8 +15,8 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ## To start server
-1. go to `card-server/src/` hit `node index.js`
-2. this will start server on port `3030`
+1. Go to `card-server/src/` hit `node index.js`
+2. This will start server on port `3030`
 
 ## Project Details.
 1. This is a simple ReactJS project which is use to display cards, on Add Card button on top left will add card in the list and card have a delete button which will remove the the respective card from the list. Cards will arrange on addition and deletion on its own. 
