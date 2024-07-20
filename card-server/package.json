@@ -1,0 +1,33 @@
+{
+  "name": "card-server",
+  "version": "1.0.0",
+  "description": "Backend API Example",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/taher27/card-demo.git"
+  },
+  "author": "Taher M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taher27/card-demo/issues"
+  },
+  "homepage": "https://github.com/taher27/card-demo#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2"
+  }
+}
