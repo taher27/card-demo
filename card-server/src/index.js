@@ -8,14 +8,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 app.get('/card', (req, res) => {
-    console.log('here...');
+    // console.log('here...');
     let resp = cardData;
     res.send(resp)
 });
 
 app.post('/card/add', (req, res) => {
     try {
-        console.log("req: ", req.body);
+        // console.log("req: ", req.body);
         const { new_card } = req.body;
         setCardData([...cardData, new_card]);
         return res
@@ -45,5 +45,5 @@ const server = app.listen(3030, function () {
     let host = server.address().address;
     let port = server.address().port;
 
-    console.log('Server is running with port: ', port);
+    // console.log('Server is running with port: ', port);
 });

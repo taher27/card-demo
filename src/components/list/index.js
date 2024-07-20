@@ -12,7 +12,7 @@ function List() {
     const [listItems, setListItems] = useState([]);
 
     useEffect(() => {
-        // make a getCards api call and setListItems here.
+        // make a getCards api call and setListItems in it.
         fetchAllCardData();
     }, []);
 
@@ -23,21 +23,22 @@ function List() {
                 "Content-Type": "application/json",
             },
         });
-        console.log("cardData: ", cardData.data);
+        // console.log("cardData: ", cardData.data);
         setListItems(cardData.data);
     };
 
     const addCard = async () => {
-        let d = Date.now();
+        let epoch = Date.now();
+        let d = new Date();
+        let timeString = `${d.getHours()} : ${d.getMinutes()} : ${d.getSeconds()}`;
 
         const cardCreated = await axios.post(`${addCardData}`, {
-            new_card: { key: d, value: d }
+            new_card: { key: epoch, value: timeString }
         });
 
         if (cardCreated.status === 200) {
             fetchAllCardData();
         }
-        console.log('cardCreated: ', cardCreated);
     }
 
     const deleteCard = async (removeItem) => {
@@ -56,7 +57,7 @@ function List() {
                 _id: removeItem.key,
             },
         });
-        console.log(cardDeleted);
+        // console.log(cardDeleted);
         if (cardDeleted.status === 200) {
             fetchAllCardData();
         }
@@ -78,7 +79,7 @@ function List() {
     return (
         <div className={'container'}>
             <div className={'header'}>
-                <div className={'button'}
+                <div className={'addButton'}
                     onClick={() => {
                         addCard();
                     }}

@@ -1,9 +1,11 @@
+let d = new Date();
+let timeString = `${d.getHours()} : ${d.getMinutes()} : ${d.getSeconds()}`;
 let cardData = [
-    { key: "one", value: "one" },
-    { key: "two", value: "two" },
-    { key: "three", value: "three" },
-    { key: "four", value: "four" },
-    { key: "five", value: "five" },
+    { key: "one", value: timeString },
+    { key: "two", value: timeString },
+    { key: "three", value: timeString },
+    { key: "four", value: timeString },
+    { key: "five", value: timeString },
 ];
 
 const setCardData = (updatedData) => {

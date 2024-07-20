@@ -7,7 +7,8 @@ function Card(props) {
     return (
         <div className={'cardContainer'}>
             <div className={'cardHeader'}>
-                <span>{value}</span>
+                <p>Time Created:</p>
+                <p>{value}</p>
             </div>
             <div className={'cardBody'}>
                 <div
